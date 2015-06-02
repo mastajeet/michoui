@@ -21,4 +21,9 @@ class PageController extends Controller {
 
     }
 
+    public function baluchon(){
+        return view('baluchon');
+
+    }
+
 }

@@ -13,6 +13,7 @@
 
 Route::get('/', 'PageController@index');
 Route::get('/WhereIsTheChalet',['as'=>'WhereIsTheChalet', 'uses'=>'PageController@Where']);
+Route::get('/DansVotreBaluchon',['as'=>'Baluchon', 'uses'=>'PageController@Baluchon']);
 Route::resource('InvitationEntry','InvitationEntryController',
 ['only'=>['index','create','store']]
 );

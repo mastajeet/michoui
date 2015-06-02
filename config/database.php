@@ -55,8 +55,8 @@ return [
 		'mysql' => [
 			'driver'    => 'mysql',
 			'host'      => env('DB_HOST', 'localhost'),
-			'database'  => env('DB_DATABASE', 'michoui'),
-			'username'  => env('DB_USERNAME', 'cyberyder'),
+			'database'  => env('DB_DATABASE', 'qcnat_mechoui'),
+			'username'  => env('DB_USERNAME', 'qcnat_cyberyder'),
 			'password'  => env('DB_PASSWORD', 'chille69'),
 			'charset'   => 'utf8',
 			'collation' => 'utf8_unicode_ci',
