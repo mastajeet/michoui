@@ -101,7 +101,7 @@
   color: @carousel-control-color;
   text-align: center;
   text-shadow: @carousel-text-shadow;
-  // We can't have this transition here because WebKit cancels the carousel
+  // We can't have this transition here because WebKit cancels the carousel.php
   // animation if you trip this while in the middle of another animation.
 
   // Set gradients for backgrounds
@@ -167,7 +167,7 @@
 // Optional indicator pips
 //
 // Add an unordered list with the following class and add a list item for each
-// slide your carousel holds.
+// slide your carousel.php holds.
 
 .carousel-indicators {
   position: absolute;
@@ -224,7 +224,7 @@
   text-align: center;
   text-shadow: @carousel-text-shadow;
   & .btn {
-    text-shadow: none; // No shadow for button elements in carousel-caption
+    text-shadow: none; // No shadow for button elements in carousel.php-caption
   }
 }
 

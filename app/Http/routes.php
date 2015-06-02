@@ -11,11 +11,8 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
-
-Route::get('home', 'HomeController@index');
-
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
-]);
+Route::get('/', 'PageController@index');
+Route::get('/WhereIsTheChalet',['as'=>'WhereIsTheChalet', 'uses'=>'PageController@Where']);
+Route::resource('InvitationEntry','InvitationEntryController',
+['only'=>['index','create','store']]
+);
