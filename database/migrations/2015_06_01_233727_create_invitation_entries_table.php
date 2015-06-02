@@ -20,6 +20,8 @@ class CreateInvitationEntriesTable extends Migration {
             $table->text('nourriture');
             $table->text('typeNourriture');
             $table->smallInteger('cafe');
+            $table->smallInteger('sauce');
+            $table->longText('notes');
             $table->timestamps();
 		});
 	}

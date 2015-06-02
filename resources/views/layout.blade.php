@@ -1,6 +1,6 @@
 <html>
 <head>
-    <title>Laravel</title>
+    <title>Méchoui!!!!</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
@@ -17,7 +17,7 @@
 <body>
 <div class="container">
     <div class="content">
-        <h1>méchoui à Rivière-à-Pierre</h1>
+        <h1>Méchoui à Rivière-à-Pierre</h1>
         <h4><small>Parce qu'on est vraiment bien organisés</small></h4>
         <br>
 

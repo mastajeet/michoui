@@ -3,8 +3,13 @@
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
 
+use App\Providers\RouteServiceProvider;
 use Illuminate\Http\Request;
 use App\InvitationEntry;
+use Illuminate\Routing\Route;
+use Illuminate\Support\Facades\Event;
+use Illuminate\Support\Facades\View;
+
 class InvitationEntryController extends Controller {
 
 	/**
@@ -14,7 +19,8 @@ class InvitationEntryController extends Controller {
 	 */
 	public function index()
 	{
-        return view('invitationentries.index');
+        return view('invitationentries.index')->with(['Entries'=>InvitationEntry::all()]);
+
 	}
 
 	/**
@@ -24,7 +30,24 @@ class InvitationEntryController extends Controller {
 	 */
 	public function create()
 	{
-        return view('invitationentries.createForm');
+
+        $Sauce = InvitationEntry::where('sauce','=',1)->get()->count();
+        $cafe = InvitationEntry::where('cafe','=',1)->get()->count();
+        $Dessert = InvitationEntry::where('typeNourriture','=','Desert')->get()->count();
+        $Accompagnement = InvitationEntry::where('typeNourriture','=','Accompagnement')->get()->count();
+
+        if($Dessert>$Accompagnement && ($Dessert-$Accompagnement)>=5){
+            $typeNourriture = [''=>'','Accompagnement'=>'Accompagnement'];
+        }elseif($Accompagnement>$Dessert && ($Accompagnement-$Dessert)>=5){
+            $typeNourriture = [''=>'','Desert'=>'Desert'];
+        }else{
+            $typeNourriture = [''=>'','Accompagnement'=>'Accompagnement','Desert'=>'Desert'];
+        }
+
+
+        return view('invitationentries.createForm')->with(['cafe'=>$cafe,'sauce'=>$Sauce,'typeNourriture'=>$typeNourriture]);
+
+
 	}
 
 	/**
@@ -33,8 +56,9 @@ class InvitationEntryController extends Controller {
 	 * @return Response
 	 */
 
-    public function store(InvitationEntry $Entry, request $request){
+    public function store(InvitationEntry $Entry, Request $request){
         $Entry->fill($request->all());
+        $Entry->save();
         return redirect(route('InvitationEntry.index'));
     }
 
@@ -47,6 +71,7 @@ class InvitationEntryController extends Controller {
 	public function show($id)
 	{
 		//
+
 	}
 
 	/**
