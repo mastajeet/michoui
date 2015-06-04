@@ -13,7 +13,7 @@
         </li>
 
         <li>
-            <item><span class="text-danger">Veuillez aussi noter que les routes sinueuses qui rencontrent ne sont pas recommandée pour la conduite en état d'ébriété. Nous vous suggérons fortement d'apporter de quoi coucher si vous prévoyez être chaudaille / pas en mesure de retourner à maison. En fait on connait même du monde qui n'hésiteront pas à partir des chicanes si vous ne vous remettez pas vos clés si vous essayer de partir du chalet en boisson ;).</item>
+            <item><span class="text-danger">Veuillez aussi noter que les routes sinueuses qui rencontrent ne sont pas recommandées pour la conduite en état d'ébriété. Nous vous suggérons fortement d'apporter de quoi coucher si vous prévoyez être chaudaille / pas en mesure de retourner à maison. En fait on connait même du monde qui n'hésiteront pas à partir des chicanes si vous ne nous remettez pas vos clés si vous essayer de partir du chalet en boisson ;).</item>
         </li>
 
     </ul>
