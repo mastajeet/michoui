@@ -33,15 +33,15 @@ class InvitationEntryController extends Controller {
 
         $Sauce = InvitationEntry::where('sauce','=',1)->get()->count();
         $cafe = InvitationEntry::where('cafe','=',1)->get()->count();
-        $Dessert = InvitationEntry::where('typeNourriture','=','Desert')->get()->count();
+        $Dessert = InvitationEntry::where('typeNourriture','=','Dessert')->get()->count();
         $Accompagnement = InvitationEntry::where('typeNourriture','=','Accompagnement')->get()->count();
 
         if($Dessert>$Accompagnement && ($Dessert-$Accompagnement)>=5){
             $typeNourriture = [''=>'','Accompagnement'=>'Accompagnement'];
         }elseif($Accompagnement>$Dessert && ($Accompagnement-$Dessert)>=5){
-            $typeNourriture = [''=>'','Desert'=>'Desert'];
+            $typeNourriture = [''=>'','Dessert'=>'Dessert'];
         }else{
-            $typeNourriture = [''=>'','Accompagnement'=>'Accompagnement','Desert'=>'Desert'];
+            $typeNourriture = [''=>'','Accompagnement'=>'Accompagnement','Dessert'=>'Dessert'];
         }
 
 
