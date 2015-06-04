@@ -24,7 +24,7 @@
         @else
 
         <td width="250" class="h5">
-            @if( $Entry->typeNourriture=="Desert" )
+            @if( $Entry->typeNourriture=="Dessert" )
                 <span class="text-danger">
             @elseif($Entry->typeNourriture=="Accompagnement" )
                         <span class="text-warning">
@@ -33,7 +33,7 @@
         </td>
 
         <td width="250" class="h5">
-            @if( $Entry->typeNourriture=="Desert" )
+            @if( $Entry->typeNourriture=="Dessert" )
                 <span class="text-danger">
             @elseif($Entry->typeNourriture=="Accompagnement" )
                 <span class="text-warning">
