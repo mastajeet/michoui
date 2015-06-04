@@ -5,6 +5,7 @@
     <h2>Qu'est-ce qu'un méchoui?</h2>
     @include('partials.carousel')
 <br>
+    <h5><strong>Fun fake fact</strong>: Saviez vous qu'en algonquien, méchoui veut dire party d'après-midi où les invités sont attendus vers midi - 13h pour festoyer?</h4>
     <a class="btn btn-primary" href={!! route("WhereIsTheChalet") !!} >
     Comment s'y rendre
     </a>
